@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvTitle" type="id" />
+    <item name="spinnerMonth" type="id" />
+    <item name="etUnit" type="id" />
+    <item name="spinnerRebate" type="id" />
+    <item name="btnCalculate" type="id" />
+    <item name="tvTotalCharges" type="id" />
+    <item name="tvFinalCost" type="id" />
+</resources>

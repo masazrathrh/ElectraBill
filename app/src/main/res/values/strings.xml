@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ElectraBill</string>
+    <string name="monthly_electricity_bills">Monthly Electricity Bills</string>
+    <string name="electrabill_monthly_electricity_calculator">ElectraBill – Monthly Electricity Calculator</string>
+    <string name="electricity_usage_kwh">Electricity Usage (kWh)</string>
+    <string name="view_bill_history">VIEW BILL HISTORY</string>
+    <string name="total_charges_rm_0_00">Total Charges: RM 0.00</string>
+    <string name="final_cost_after_rebate_rm_0_00">Final Cost After Rebate: RM 0.00</string>
+</resources>
