@@ -11,7 +11,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="ElectraBill – Monthly Electricity Calculator"
+        android:text="ElectraBill – Monthly Electricity Bill Calculator"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"

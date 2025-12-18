@@ -1,57 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F6EEF9">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvCopyright"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About ElectraBill"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#4A2E83"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Profile Image -->
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/profile_picture"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Student Info -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Full Name: Mas Azra Athirah Binti Mohd Azahari"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student ID: 2023436008"
+                android:textSize="16sp"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Course: ICT602 – Mobile Technology and Development"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- GitHub -->
+            <TextView
+                android:id="@+id/tvGithub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GitHub Repository: https://github.com/masazrathrh/ElectraBill.git"
+                android:textSize="15sp"
+                android:textColor="#1A73E8"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Instructions Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How to Use ElectraBill"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4A2E83"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Instructions -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Select the month for your electricity bill.\n\n2. Enter your electricity usage in kWh.\n\n3. Enter the rebate percentage between 0% and 5%.\n\n4. Tap the Calculate Bill button to see the total charges and final cost.\n\n5. Tap the Saved Bills button to view all saved electricity bills.\n\n6. Tap on a saved bill to choose View Bill Details or Delete Bill.\n\n7. Select View Bill Details to see the full bill information."
+                android:textSize="15sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer (Copyright) -->
+    <TextView
+        android:id="@+id/tvCopyright"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:text="© 2025 ElectraBill. Developed by Mas Azra Athirah Binti Mohd Azahari. All rights reserved."
+        android:textSize="13sp"
+        android:textColor="#555555"
+        android:gravity="center"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- TITLE ABOVE IMAGE -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="About ElectraBill"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
-
-        <!-- PROFILE IMAGE -->
-        <ImageView
-            android:id="@+id/imgProfile"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/profile_picture"
-            android:scaleType="centerCrop"
-            android:layout_marginBottom="16dp" />
-
-        <!-- STUDENT INFO -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Full Name: Mas Azra Athirah Binti Mohd Azahari\nStudent ID: 2023436008\nCourse: ICT602 – Mobile Technology and Development"
-            android:textSize="16sp"
-            android:lineSpacingExtra="6dp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- COPYRIGHT -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="© 2025 ElectraBill. Developed by Mas Azra Athirah Binti Mohd Azahari. All rights reserved."
-            android:textSize="14sp"
-            android:layout_marginBottom="16dp" />
-
-        <!-- GITHUB TEXT (UNCHANGED) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="GitHub Repository: https://github.com/USERNAME/ElectraBill"
-            android:textSize="14sp"
-            android:textColor="#1A73E8" />
-
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
